@@ -4,7 +4,8 @@
   imports =
     [ 
       ./network.nix
-      #./clickhouse.nix
+      ./hardware-configuration.nix
+      ./clickhouse.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
@@ -40,6 +41,8 @@
   ];
 
   services.openssh.enable = true;
+
+  services.my-clickhouse.enable = true;
   programs.nix-ld.enable = true;
   system.stateVersion = "25.11"; 
 }
