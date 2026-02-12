@@ -6,6 +6,7 @@
       ./network.nix
       ./hardware-configuration.nix
       ./clickhouse.nix
+      ./redis.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
